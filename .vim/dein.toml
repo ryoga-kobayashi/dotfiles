@@ -1,3 +1,6 @@
+[[plugin]]
+repo = 'bronson/vim-trailing-whitespace'
+
 # [[plugins]]
 # repo = 'cocopon/lightline-hybrid.vim'
 

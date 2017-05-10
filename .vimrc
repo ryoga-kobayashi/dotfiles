@@ -58,6 +58,11 @@ set smartcase
 set clipboard+=unnamed
 set clipboard+=autoselect
 
+" =============================== "
+" bronson/vim-trailing-whitespace "
+" =============================== "
+autocmd BufWritePre * :FixWhitespace
+
 " ======================= "
 "  itchyny/lightline.vim  "
 " ======================= "
