@@ -2,6 +2,8 @@
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
+# browser
+export BROWSER=/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome
 
 # history
 export HISTFILE=$HOME/.zsh_history
@@ -10,6 +12,9 @@ export SACEHIST=100000
 setopt hist_ignore_dups
 setopt hist_ignore_all_dups
 setopt hist_ignore_space
+
+# zsh-completions
+fpath=(path/to/zsh-completions/src $fpath)
 
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
@@ -29,6 +34,11 @@ alias ls='ls -G'
 alias la='ls -Gla'
 alias r='R'
 alias ipython='ipython --pylab'
+
+# zsh-completions
+if [ -e /usr/local/share/zsh-completions ]; then
+    fpath=(/usr/local/share/zsh-completions $fpath)
+fi
 
 # promt
 function toon {
